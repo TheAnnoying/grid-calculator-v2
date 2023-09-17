@@ -1,0 +1,15 @@
+---
+import Page from "../layouts/Page.astro";
+
+import Input from "../components/Input.svelte";
+import FontSelect from "../components/FontCategorySelect.svelte";
+import Result from "../components/Result.svelte";
+import Credits from "../components/Credits.svelte";
+---
+
+<Page title="Grid Calculator">
+	<Input client:visible />
+	<FontSelect client:visible />
+	<Result client:visible />
+	<Credits client:visible />
+</Page>
