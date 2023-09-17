@@ -3,7 +3,7 @@
     export let category;
 
     let dialog;
-    const clean = (input) => input.toLowerCase().replace(/ +/g, "_");
+    const clean = (input) => input.toLowerCase().replace(/ +/g, "-");
     //somehow update the calculation
 </script>
 <button on:click={() => dialog.showModal()}>{category.id}</button>
@@ -14,8 +14,9 @@
         <style>
             @font-face {
                 font-family: "${clean(font[3])}/${clean(font[0])}";
-                src: url("./fonts/${clean(font[3])}/${clean(font[0])}.ttf");
+                src: url("/fonts/${clean(font[3])}/${clean(font[0])}.ttf");
             }
-        </style>`}
+        </style>`
+        }
     {/each}
 </dialog>
