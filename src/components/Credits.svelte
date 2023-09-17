@@ -27,15 +27,18 @@
         padding-bottom: 20px;
     }
     h1 {
-        font-family: "minecraft/fivebold";
-        text-shadow: 2px 0 0 black;
+        font-family: "minecraft/five-bold";
+        text-shadow: 0 5px 0 black;
+        @apply text-3xl;
     }
     a {
         font-family: "minecraft/seven";
         font-weight: bolder;
+        @apply text-xl;
     }
     p {
         color: gray;
+        font-family: "minecraft/seven";
         font-style: italic;
     }
 </style>
