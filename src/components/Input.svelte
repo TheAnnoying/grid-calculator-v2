@@ -10,8 +10,8 @@
         }
 
         const context = canvas.getContext("2d");
-        context.font = `${currentFont.size}px ${currentFont.id}`;
-        
+        context.font = `${$currentFont.size} "${$currentFont.id}"`;
+
         const measure = context.measureText(input);
 
         $currentHeight = measure.actualBoundingBoxAscent - 1;
