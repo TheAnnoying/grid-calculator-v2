@@ -1,25 +1,9 @@
 <script>
-    import { currentWidth, currentHeight, currentFont } from "../lib/store";
-    let input, canvas;
-
-    function updateFont() {
-        if(input.length === 0) {
-            $currentWidth = 0;
-            $currentHeight = 0;
-            return;
-        }
-
-        const context = canvas.getContext("2d");
-        context.font = `${$currentFont.size} '${$currentFont.id}'`;
-
-        const measure = context.measureText(input);
-
-        $currentHeight = Math.round(measure.actualBoundingBoxAscent);
-        $currentWidth = Math.round(measure.width);
-    }
+    import { value, canvas } from "../lib/store";
+    import { updateDimensions } from "../lib/updateDimensions";
 </script>
-<input id="input" type="text" maxlength="55" spellcheck="false" placeholder="Enter text here" on:keyup={updateFont} bind:value={input}/>
-<canvas id="canvas" bind:this={canvas}></canvas>
+<input id="input" type="text" maxlength="55" spellcheck="false" placeholder="Enter text here" on:keyup={() => updateDimensions()} bind:value={$value}/>
+<canvas id="canvas" bind:this={$canvas}></canvas>
 <style>
     #canvas {
         display: none;
