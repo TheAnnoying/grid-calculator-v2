@@ -10,13 +10,20 @@
         }
 
         const context = canvas.getContext("2d");
-        context.font = `${$currentFont.size} "${$currentFont.id}"`;
+        context.font = `${$currentFont.size} '${$currentFont.id}'`;
 
         const measure = context.measureText(input);
 
-        $currentHeight = measure.actualBoundingBoxAscent - 1;
-        $currentWidth = Math.floor(measure.width) - 1;
+        $currentHeight = Math.round(measure.actualBoundingBoxAscent);
+        $currentWidth = Math.round(measure.width);
     }
 </script>
 <input id="input" type="text" maxlength="55" spellcheck="false" placeholder="Enter text here" on:keyup={updateFont} bind:value={input}/>
 <canvas id="canvas" bind:this={canvas}></canvas>
+<style>
+    #canvas {
+        display: none;
+        font-smooth: never;
+        -webkit-font-smoothing: none;
+    }
+</style>
