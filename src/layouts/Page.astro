@@ -3,7 +3,7 @@ import { ViewTransitions } from "astro:transitions";
 const { title } = Astro.props;
 ---
 
-<html lang="en" data-theme="garden">
+<html lang="en">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -28,5 +28,11 @@ const { title } = Astro.props;
 		justify-content: center;
 		align-items: center;
 		background-color: hsl(221, 14%, 27%);
+		font-family: Arial, Helvetica, sans-serif;
+	}
+	
+	h1, p, a {
+		margin: 0;
+		color: white;
 	}
 </style>
