@@ -1,6 +1,6 @@
 <script>
     import { currentWidth, currentHeight, currentFont } from "../lib/store";
 </script>
-<p>width: {$currentWidth}</p>
-<p>height: {$currentHeight}</p>
+<p>width: {$currentWidth - 1}</p>
+<p>height: {$currentHeight -1}</p>
 <p>{$currentFont.id}</p>
