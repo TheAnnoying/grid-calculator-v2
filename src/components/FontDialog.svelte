@@ -1,5 +1,6 @@
 <script>
     import { currentFont } from "../lib/store";
+    import { updateDimensions } from "../lib/updateDimensions";
     export let category;
 
     let dialog;
@@ -8,7 +9,7 @@
 <button on:click={() => dialog.showModal()}>{category.id}</button>
 <dialog bind:this={dialog}>
     {#each category.fontList as font}
-        <button style="font-family: '{clean(font[2])}/{clean(font[0])}'" on:click={() => $currentFont = { id: `${clean(font[2])}/${clean(font[0])}`, size: font[1] }}>{font[0]}</button>
+        <button style="font-family: '{clean(font[2])}/{clean(font[0])}'" on:click={() => { ($currentFont = { id: `${clean(font[2])}/${clean(font[0])}`, size: font[1] }); (updateDimensions())}}>{font[0]}</button>
         {@html `
         <style>
             @font-face {
