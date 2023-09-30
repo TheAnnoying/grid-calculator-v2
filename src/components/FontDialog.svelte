@@ -9,14 +9,14 @@
 <button on:click={() => dialog.showModal()}>{category.id}</button>
 <dialog bind:this={dialog}>
     {#each category.fontList as font}
-        <button style="font-family: '{clean(font[2])}/{clean(font[0])}'" on:click={() => { ($currentFont = { id: `${clean(font[2])}/${clean(font[0])}`, size: font[1] }); (updateDimensions())}}>{font[0]}</button>
+        <button style="font-family: '{clean(font[2])}/{clean(font[0])}'" on:click={() => { ($currentFont = { id: `${clean(font[2])}/${clean(font[0])}`, size: font[1], name: `${font[2]} - ${font[0]}` }); (updateDimensions())}}>{font[0]}</button>
         {@html `
         <style>
             @font-face {
                 font-family: "${clean(font[2])}/${clean(font[0])}";
                 src: url("/fonts/${clean(font[2])}/${clean(font[0])}.ttf");
             }
-        </style>`
-        }
+        </style>
+        `}
     {/each}
 </dialog>
