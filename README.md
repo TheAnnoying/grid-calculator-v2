@@ -20,7 +20,7 @@ Run the follow commands:
 * Install node modules: `npm install`
 * Run the dev server: `npx astro dev`
 
-The site will be live on [localhost:4321](https://localhost:4321)
+The site will be live on [localhost:4321](http://localhost:4321)
 
 ## 🙏 Credits
 * [Ewan Howell](https://ewanhowell.com/) - helped with the old site
