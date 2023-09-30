@@ -2,9 +2,9 @@ import { currentWidth, currentHeight, currentFont, canvas, value } from "./store
 import { get } from "svelte/store";
 
 export function updateDimensions() {
-    if(get(value).length === 0) {
-        currentWidth.set(0);
-        currentHeight.set(0);
+    if([0, null].includes(get(value).length)) {
+        currentWidth.set(1);
+        currentHeight.set(1);
         return;
     }
 
