@@ -1,8 +1,8 @@
 import { writable } from "svelte/store";
 
 export let
-    currentWidth = writable(0),
-    currentHeight = writable(0),
-    currentFont = writable({ id: "patred/minecraft-ten-lowercase.ttf", size: "13px" }),
+    currentWidth = writable(1),
+    currentHeight = writable(1),
+    currentFont = writable({ id: null, size: "13px", name: null }),
     canvas = writable(null),
     value = writable(null);
