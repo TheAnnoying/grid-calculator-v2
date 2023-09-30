@@ -4,13 +4,28 @@ import { Image } from "astro:assets";
 
 import Input from "../components/Input.svelte";
 import FontSelect from "../components/FontCategorySelect.svelte";
+import Multiplier from "../components/Multiplier.svelte";
 import Result from "../components/Result.svelte";
 ---
 
 <Page title="Grid Calculator">
 	<Image src="/grid_calculator.svg" alt="Grid Calculator Logo" width="800" height="90" transition:name="logo" />
-	<Input client:visible />
-	<FontSelect client:visible />
+	<div>
+		<Input client:visible />
+		<FontSelect client:visible />
+	</div>
+	<Multiplier client:visible />
 	<Result client:visible />
 	<a href="/credits">Credits</a>
 </Page>
+<style>
+	img {
+		padding: 50px;
+	}
+
+	div {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+	}
+</style>
