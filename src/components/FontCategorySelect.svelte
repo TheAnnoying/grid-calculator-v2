@@ -7,43 +7,43 @@
         {
             id: "Minecraft",
             fontList: [
-                [ "Five", "7px", "Minecraft" ],
-                [ "Five Bold", "13px", "Minecraft" ],
-                [ "Seven", "13px", "Minecraft" ],
+                [ "Five", 7, "Minecraft" ],
+                [ "Five Bold", 13, "Minecraft" ],
+                [ "Seven", 13, "Minecraft" ],
             ]
         },
         { 
             id: "FloideN",
             fontList: [
-                [ "MC Eleven", "13px", "FloideN" ],
-                [ "MC Nine", "13px", "FloideN" ],
-                [ "MC Ten Alt", "13px", "FloideN" ],
-                [ "MC Ten Fire", "13px", "FloideN" ],
-                [ "MC Terra", "13px", "FloideN" ],
-                [ "Minecraft Bold Ten", "12px", "FloideN" ],
-                [ "Minecraft Thick Ten", "13px", "FloideN" ],
-                [ "Modified MC Ten Drip", "13px", "FloideN" ]
+                [ "MC Eleven", 13, "FloideN" ],
+                [ "MC Nine", 13, "FloideN" ],
+                [ "MC Ten Alt", 13, "FloideN" ],
+                [ "MC Ten Fire", 13, "FloideN" ],
+                [ "MC Terra", 13, "FloideN" ],
+                [ "Minecraft Bold Ten", 13, "FloideN" ],
+                [ "Minecraft Thick Ten", 13, "FloideN" ],
+                [ "Modified MC Ten Drip", 13, "FloideN" ]
             ]
         },
         {
             id: "7pxls",
             fontList: [
-                [ "Eight", "13px", "7pxls" ],
-                [ "Hideaway GUI", "13px", "7pxls" ],
-                [ "MC Ten Elongated Fix", "13px", "7pxls" ],
-                [ "MC Ten Elongated Middle", "13px", "7pxls" ],
-                [ "MC Ten Elongated Reverse", "13px", "7pxls" ],
-                [ "Minecraft Ten Round", "13px", "7pxls" ],
-                [ "Mojang Pixel", "13px", "7pxls" ],
-                [ "Nine", "13px", "7pxls" ],
-                [ "Seven Round", "13px", "7pxls" ],
-                [ "Seven", "13px", "7pxls" ]
+                [ "Eight", 13, "7pxls" ],
+                [ "Hideaway GUI", 13, "7pxls" ],
+                [ "MC Ten Elongated Fix", 13, "7pxls" ],
+                [ "MC Ten Elongated Middle", 13, "7pxls" ],
+                [ "MC Ten Elongated Reverse", 13, "7pxls" ],
+                [ "Minecraft Ten Round", 13, "7pxls" ],
+                [ "Mojang Pixel", 13, "7pxls" ],
+                [ "Nine", 13, "7pxls" ],
+                [ "Seven Round", 13, "7pxls" ],
+                [ "Seven", 13, "7pxls" ]
             ]
         },
         {
             id: "Patred",
             fontList: [
-                [ "Minecraft Ten Lowercase", "13px", "Patred" ]
+                [ "Minecraft Ten Lowercase", 13, "Patred" ]
             ]
         }
     ];
