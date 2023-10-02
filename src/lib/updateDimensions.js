@@ -13,13 +13,13 @@ export function updateDimensions() {
 
     context.fillStyle = "black";
     context.fillRect(0, 0, canvasElement.width, canvasElement.height);
-
+    
     const multiplyFactor = 8;
     context.font = `${get(currentFont).size*multiplyFactor}px '${get(currentFont).id}'`;
-    context.textBaseline = "top";
+    context.textBaseline = "middle";
 
     context.fillStyle = "red";
-    context.fillText(get(value), 0, 0);
+    context.fillText(get(value), 0, canvasElement.height/2);
     
     const imgData = context.getImageData(0, 0, canvasElement.width, canvasElement.height).data;
 
