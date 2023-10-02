@@ -20,7 +20,7 @@
                 [ "MC Ten Alt", 13, "FloideN" ],
                 [ "MC Ten Fire", 13, "FloideN" ],
                 [ "MC Terra", 13, "FloideN" ],
-                [ "Minecraft Bold Ten", 13, "FloideN" ],
+                [ "Minecraft Bold Ten", 12, "FloideN" ],
                 [ "Minecraft Thick Ten", 13, "FloideN" ],
                 [ "Modified MC Ten Drip", 13, "FloideN" ]
             ]
