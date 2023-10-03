@@ -1,0 +1,65 @@
+---
+import Page from "../layouts/Page.astro";
+---
+
+<Page title="About">
+	<img src="/grid_calculator.svg" alt="Grid Calculator Logo" width="800" height="90" />
+	<div>
+		<h1>About</h1>
+		<h2>How to use</h2>
+		<p>
+			This site aims to help Minecraft title creators who use Adobe Illustrator to create accurate grids for their logos.
+			<br>
+			Simply select the font you'd like to use and write down your title's text. Optionally, you can select a multiplier if you'd like smaller pixels on your grid.
+			<br>
+			Once you configured everything to your liking, you should automatically see the correct width and height of your text appear.
+		</p>
+		<h2>Credits</h2>
+		<p style="line-height: 1.5em;">
+			This site was mainly built by <a href="https://theannoying.dev/" target="_blank">TheAnnoying</a>.
+			<br>
+			It was developed using <a href="https://astro.build/" target="_blank">Astro</a> & <a href="https://svelte.dev/" target="_blank">svelte</a>
+			<br>
+			<a href="https://ewanhowell.com/" target="_blank">Ewan Howell</a> helped with the current calculation method for the text using JavaScript canvas. Ewan also helped style the old version of the site.
+			<br>
+			<a href="https://xylight.dev/" target="_blank">Xylight</a> helped a lot with all svelte code.
+			<br>
+			This site was created for the Minecraft Titles community on Discord.
+		</p>
+		<h2>License</h2>
+		<p>This project is under the MIT License and can be freely used, modified, and distributed by anyone, as long as they adhere to the terms and conditiosn outlined in the license.</p>
+	</div>
+	<span><a href="/" transition:name="link" class="dungeon-button">HOME</a></span>
+</Page>
+<style>
+	img {
+		max-width: calc(100% - 40px);
+	}
+
+	div {
+		text-align: left;
+		margin: 100px;
+	}
+
+	h1 {
+		font-family: "minecraft/ten";
+		font-size: 2.5rem;
+		text-shadow: 0 5px black;
+		letter-spacing: 2px;
+	}
+
+	h2 {
+		font-family: "minecraft/five-bold";
+		font-size: 1.3rem;
+		text-shadow: 0 3px black;
+	}
+
+	@font-face {
+		font-family: "minecraft/ten";
+		src: url("/fonts/patred/minecraft-ten-lowercase.ttf");
+	}
+	@font-face {
+		font-family: "minecraft/five-bold";
+		src: url("/fonts/minecraft/five-bold.ttf");
+	}
+</style>
