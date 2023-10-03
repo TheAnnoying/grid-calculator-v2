@@ -20,15 +20,22 @@ const { title } = Astro.props;
 	:root {
 		color-scheme: dark;
 	}
-	
+
+	html {
+		overflow: hidden; /* remember to remove this after you make this site responsive */
+	}
+
 	body {
+		overflow: hidden; /* remember to remove this after you make this site responsive */
 		margin: 0;
 		display: flex;
 		flex-direction: column;
-		height: calc(100vh - 31px);
+		min-height: 100vh;
 		justify-content: center;
 		align-items: center;
-		background-color: rgb(23, 25, 30);
+		background-image: url("/background.png");
+		background-size: cover;
+		background-position: 50% 50%;
 		font-family: Arial, Helvetica, sans-serif;
 	}
 
@@ -50,16 +57,35 @@ const { title } = Astro.props;
 		transform: translateY(3px);
 	}
 
-	input {
-		font-size: 1.5rem;
-		padding: 5px 25px;
-		border-radius: 0;
-		border: 0;
-		margin: 5px;
+	.dungeon-button {
+		background-color: #3F8D4F;
+		color: #FFF;
+		position: relative;
+		text-shadow: 0 3.5px #285130;
+		font-family: "minecraft/five-bold";
+		text-decoration: none;
+		padding: 10px 60px;
+		filter: drop-shadow(7px 7px #0004);
 	}
 
-	input:focus-visible {
-		outline: 5px solid rgba(255, 255, 255, 0.5);
+	.dungeon-button::before {
+		content: "";
+		position: absolute;
+		inset: 0 -5px 0 -5px;
+		background: linear-gradient(90deg, #357B41 50%, #387A44 50%);
+		z-index: -1;
+	}
+
+	.dungeon-button::after {
+		content: "";
+		position: absolute;
+		inset: -5px 0 -5px 0;
+		background: linear-gradient(180deg, #61CE73 50%, #24582F 50%);
+		z-index: -1;
+	}
+
+	.dungeon-button-gray {
+		filter: grayscale(1)
 	}
 
 	h1, p, a {
@@ -67,13 +93,29 @@ const { title } = Astro.props;
 		color: white;
 	}
 
+	dialog {
+		padding: 50px;
+		border-image-slice: 8 8 8 8 fill;
+		border-image-width: 40px;
+		border-image-repeat: stretch stretch;
+		background-color: transparent;
+		border-image-source: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAmUlEQVQ4jb1SMQ6AMAg8TB+ggy6aGFf//xZX40vqRAII1VjjTS1HDwpHOWd0w5RRB6K2H2tFAACJD8u8KmI/NhW3d5vX2CAT/IhjUsDmXYRqkORFVrVfkDGPc4fNX/IQcWFHJdgFqI5KXZQE3a3VQM3IrjjqwstRM4pMZ+EVUTMqPbrjQ2d7VSX3v7O5sueZx85+gwYAfaBDJ1qjXdKOLe5QAAAAAElFTkSuQmCC");
+		image-rendering: pixelated;
+	}
+
+	dialog h1 {
+		font-family: "minecraft/five-bold";
+	}
+
 	#github-link {
-		position: absolute;
-		bottom: 15px;
+		position: fixed;
+		bottom: 0;
+		padding: 15px 0;
 		color: #858B89;
 		font-size: 14px;
 		text-decoration-line: underline;
 		text-underline-offset: 4px;
+		text-align: center;
 	}
 
 	#github-link:hover {
