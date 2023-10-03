@@ -1,6 +1,5 @@
 ---
 import Page from "../layouts/Page.astro";
-import { Image } from "astro:assets";
 
 import Input from "../components/Input.svelte";
 import FontSelect from "../components/FontCategorySelect.svelte";
@@ -9,23 +8,29 @@ import Result from "../components/Result.svelte";
 ---
 
 <Page title="Grid Calculator">
-	<Image src="/grid_calculator.svg" alt="Grid Calculator Logo" width="800" height="90" transition:name="logo" />
+	<img src="/grid_calculator.svg" alt="Grid Calculator Logo" width="800" height="90" />
 	<div>
 		<Input client:visible />
 		<FontSelect client:visible />
 	</div>
 	<Multiplier client:visible />
 	<Result client:visible />
-	<a href="/credits">Credits</a>
+	<a href="/about" transition:name="link">About</a>
 </Page>
 <style>
 	img {
 		padding: 50px;
+		max-width: calc(100% - 40px);
 	}
 
 	div {
 		display: flex;
 		flex-direction: row;
 		align-items: center;
+	}
+	
+	a {
+		font-family: "minecraft/five-bold";
+		margin-top: 30px;
 	}
 </style>
