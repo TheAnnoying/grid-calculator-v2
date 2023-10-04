@@ -1,6 +1,8 @@
 <script>
     import { currentHeight, currentWidth } from "../lib/store";
     import { updateDimensions } from "../lib/updateDimensions";
+
+    let selected = 1;
     function multiply(number) {
         updateDimensions(); // reset the calculation in case it's already multiplied
         currentHeight.set($currentHeight*number);
@@ -9,9 +11,9 @@
     }
 </script>
 <div id="multipliers">
-    <button on:click={() => multiply(1)}>x1</button>
-    <button on:click={() => multiply(3)}>x3</button>
-    <button on:click={() => multiply(6)}>x6</button>
+    <button on:click={() => multiply(1)} class="{selected === 1 ? "button-selected" : ""}">x1</button>
+    <button on:click={() => multiply(3)} class="{selected === 3 ? "button-selected" : ""}">x3</button>
+    <button on:click={() => multiply(6)} class="{selected === 6 ? "button-selected" : ""}">x6</button>
 </div>
 <style>
     #multipliers {
