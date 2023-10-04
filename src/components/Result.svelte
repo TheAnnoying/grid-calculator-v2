@@ -8,7 +8,7 @@
     </div>
     <div class="data">
         <p>Current Font</p>
-        <span>{$currentFont.name}</span>
+        <span>{$currentFont.name ?? "None"}</span>
     </div>
 </div>
 <style>
