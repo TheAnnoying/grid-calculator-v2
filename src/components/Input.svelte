@@ -21,8 +21,15 @@
 
     input:focus-visible {
         background-color: #323231;
-        outline: 5px solid white
+        outline: 5px solid white;
     }
+
+    @media (max-width: 640px) {
+        input {
+            font-size: 1rem;
+        }
+    }
+    
     #canvas {
         display: none;
         font-smooth: never;
