@@ -29,7 +29,7 @@ import Page from "../layouts/Page.astro";
 		<h2>License</h2>
 		<p>This project is under the MIT License and can be freely used, modified, and distributed by anyone, as long as they adhere to the terms and conditiosn outlined in the license.</p>
 	</div>
-	<span><a href="/" transition:name="link" class="dungeon-button">HOME</a></span>
+	<a href="/" transition:name="link" class="button">HOME</a>
 </Page>
 <style>
 	img {
@@ -61,5 +61,15 @@ import Page from "../layouts/Page.astro";
 	@font-face {
 		font-family: "minecraft/five-bold";
 		src: url("/fonts/minecraft/five-bold.ttf");
+	}
+
+	@media (max-width: 640px) {
+		div {
+			margin: 30px;
+		}
+
+		a {
+			margin: 60px;
+		}
 	}
 </style>
