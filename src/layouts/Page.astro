@@ -36,6 +36,7 @@ const { title } = Astro.props;
 	
 	.button,
 	button {
+		user-select: none;
 		border-image-source: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAMElEQVQImWP8//8/Q9L5kv8MDAyMjKbVjv+5hPgYfr79ysDEwMDA+PT0AwYGBgZGADO+DS6ouzDJAAAAAElFTkSuQmCC");
 		border-image-repeat: stretch stretch;
 		border-image-slice: 1 1 1 1 fill;
@@ -65,11 +66,11 @@ const { title } = Astro.props;
 	}
 
 	.button-gray {
-		filter: grayscale(1);
+		filter: grayscale(1) drop-shadow(7px 7px #0004);
 	}
 
 	.button-gray:active {
-		filter: brightness(.7) grayscale(1);
+		filter: grayscale(1) drop-shadow(7px 7px #0004) brightness(.7);
 	}
 
 	h1, p, a {
@@ -105,4 +106,9 @@ const { title } = Astro.props;
 	#github-link:hover {
 		color: white;
 	}
+
+	.disabled {
+        opacity: 20%;
+        pointer-events: none;
+    }
 </style>
