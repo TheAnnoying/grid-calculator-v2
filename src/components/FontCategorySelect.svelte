@@ -1,6 +1,5 @@
 <script>
     import FontDialog from "./FontDialog.svelte";
-    import { currentFont } from "../lib/store";
     let dialog;
 
     const fonts = [
@@ -48,7 +47,7 @@
         }
     ];
 </script>
-<button on:click={() => dialog.showModal()}>{$currentFont.name ?? "Select font"}</button>
+<button on:click={() => dialog.showModal()} class="button-gray">Select Font</button>
 <dialog id="modal" bind:this={dialog}>
     <h1>Select category</h1>
     {#each fonts as category}
