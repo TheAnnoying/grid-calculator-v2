@@ -1,5 +1,5 @@
 <script>
-    import { currentHeight, currentWidth } from "../lib/store";
+    import { currentHeight, currentWidth, value } from "../lib/store";
     import { updateDimensions } from "../lib/updateDimensions";
 
     let selected = 1;
@@ -10,7 +10,7 @@
         selected = number;
     }
 </script>
-<div id="multipliers">
+<div id="multipliers" class="{$value ? "" : "disabled"}">
     <button on:click={() => multiply(1)} class="{selected === 1 ? "button-selected" : ""}">x1</button>
     <button on:click={() => multiply(3)} class="{selected === 3 ? "button-selected" : ""}">x3</button>
     <button on:click={() => multiply(6)} class="{selected === 6 ? "button-selected" : ""}">x6</button>
