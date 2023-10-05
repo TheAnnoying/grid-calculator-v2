@@ -2,7 +2,8 @@ import { currentWidth, currentHeight, currentFont, canvas, value } from "./store
 import { get } from "svelte/store";
 
 export function updateDimensions() {
-	if(get(value).trim() === "") {
+	const inputValue = get(value);
+	if(inputValue?.trim() === "" || !inputValue) {
 		currentWidth.set(1);
 		currentHeight.set(1);
 		return;
@@ -20,7 +21,7 @@ export function updateDimensions() {
 	context.textAlign = "center";
 
 	context.fillStyle = "red";
-	context.fillText(get(value), canvasElement.width/2, canvasElement.height/2);
+	context.fillText(inputValue, canvasElement.width/2, canvasElement.height/2);
 
 	const imgData = context.getImageData(0, 0, canvasElement.width, canvasElement.height).data;
 
