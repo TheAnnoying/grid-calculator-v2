@@ -1,8 +1,13 @@
 <script>
 	import { value, canvas, currentFont } from "../lib/store";
 	import { updateDimensions } from "../lib/updateDimensions";
+
+	function isDisabled() {
+		if($currentFont.id) return true;
+		else return false;
+	}
 </script>
-<input id="input" type="text" maxlength="55" spellcheck="false" placeholder="Enter text here" on:keyup={() => updateDimensions()} bind:value={$value} class="{$currentFont.id ? "" : "disabled"}"/>
+<input id="input" type="text" maxlength="55" spellcheck="false" placeholder="Enter text here" on:keyup={() => updateDimensions()} bind:value={$value} class="{$currentFont.id ? "" : "disabled"}" disabled='{isDisabled}'/>
 <canvas id="canvas" bind:this={$canvas} height="400" width="1500"></canvas>
 <style>
 	input {
