@@ -19,25 +19,4 @@
 		gap: 50px;
 		margin: 30px;
 	}
-
-	.data {
-		padding: 15px;
-		width: 400px;
-		outline: 5px solid #414351;
-		background-color: #16202d;
-		display: flex;
-		flex-direction: column;
-	}
-
-	p {
-		color: #a2a4ad;
-		font-size: 1.3rem;
-	}
-
-	span {
-		font-size: 2rem;
-		font-family: "patred/minecraft-ten-lowercase";
-		text-shadow: 0 4px 0 black;
-		margin: auto 0;
-	}
 </style>

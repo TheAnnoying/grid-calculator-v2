@@ -49,7 +49,6 @@ const { title } = Astro.props;
 		filter: drop-shadow(7px 7px #0004);
 		font-size: 1.5rem;
 		padding: 5px 50px;
-		box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.3);
 		border-radius: 0;
 		margin: 5px;
 	}
@@ -108,7 +107,35 @@ const { title } = Astro.props;
 	}
 
 	.disabled {
-        opacity: 20%;
+		cursor: not-allowed;
+        opacity: 30%;
         pointer-events: none;
     }
+
+	.data {
+		padding: 15px;
+		width: 400px;
+		outline: 5px solid #4143519d;
+		background-color: #16202d9d;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.data p {
+		color: #a2a4ad;
+		font-size: 1.3rem;
+	}
+
+	.data span {
+		font-size: 2rem;
+		font-family: "patred/minecraft-ten-lowercase";
+		text-shadow: 0 4px 0 black;
+		margin: auto 0;
+	}
+
+	@media (max-width: 640px) {
+		.data {
+			width: auto;
+		}
+	}
 </style>
