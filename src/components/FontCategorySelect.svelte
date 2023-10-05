@@ -47,10 +47,17 @@
 		}
 	];
 </script>
-<button on:click={() => dialog.showModal()} class="button-gray">Select Font</button>
+<button on:click={() => dialog.showModal()}>Select Font</button>
 <dialog id="modal" bind:this={dialog}>
 	<h1>Select category</h1>
-	{#each fonts as category}
-		<FontDialog {category}/>
-	{/each}
+	<div>
+		{#each fonts as category}
+			<FontDialog {category}/>
+		{/each}
+	</div>
 </dialog>
+<style>
+	div {
+		display: grid;
+	}
+</style>
