@@ -3,10 +3,6 @@
 	import { updateDimensions } from "../lib/updateDimensions";
 
 	let selected = 1;
-	function isDisabled() {
-		if($value) return true;
-		else return false;
-	}
 	function multiply(number) {
 		updateDimensions(); // reset the calculation in case it's already multiplied
 		currentHeight.set($currentHeight*number);
@@ -15,9 +11,9 @@
 	}
 </script>
 <div id="multipliers" class="{$value ? "" : "disabled"}">
-	<button on:click={() => multiply(1)} class="button-gray {selected === 1 ? "button-selected" : ""}" disabled='{isDisabled}'>x1</button>
-	<button on:click={() => multiply(3)} class="button-gray {selected === 3 ? "button-selected" : ""}" disabled='{isDisabled}'>x3</button>
-	<button on:click={() => multiply(6)} class="button-gray {selected === 6 ? "button-selected" : ""}" disabled='{isDisabled}'>x6</button>
+	<button on:click={() => multiply(1)} class="button-gray {selected === 1 ? "button-selected" : ""}" disabled={!$value}>x1</button>
+	<button on:click={() => multiply(3)} class="button-gray {selected === 3 ? "button-selected" : ""}" disabled={!$value}>x3</button>
+	<button on:click={() => multiply(6)} class="button-gray {selected === 6 ? "button-selected" : ""}" disabled={!$value}>x6</button>
 </div>
 <style>
 	#multipliers {
