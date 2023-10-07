@@ -1,5 +1,5 @@
 <script>
-	import { currentFont } from "../lib/store";
+	import { currentFont, currentHeight, currentWidth, selectedMultiplier } from "../lib/store";
 	import { updateDimensions } from "../lib/updateDimensions";
 	export let category;
 
@@ -8,6 +8,9 @@
 	function selectFont(font) {
 		$currentFont = { id: `${clean(font[2])}/${clean(font[0])}`, size: font[1], name: `${font[2]} - ${font[0]}` };
 		updateDimensions();
+
+		currentHeight.set($currentHeight*$selectedMultiplier);
+		currentWidth.set($currentWidth*$selectedMultiplier);
 
 		dialog.close();
 	}

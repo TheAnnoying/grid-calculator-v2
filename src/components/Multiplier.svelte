@@ -1,19 +1,18 @@
 <script>
-	import { currentHeight, currentWidth, value } from "../lib/store";
+	import { currentHeight, currentWidth, value, selectedMultiplier } from "../lib/store";
 	import { updateDimensions } from "../lib/updateDimensions";
 
-	let selected = 1;
 	function multiply(number) {
 		updateDimensions(); // reset the calculation in case it's already multiplied
 		currentHeight.set($currentHeight*number);
 		currentWidth.set($currentWidth*number);
-		selected = number;
+		selectedMultiplier.set(number);
 	}
 </script>
 <div id="multipliers" class="{$value ? "" : "disabled"}">
-	<button on:click={() => multiply(1)} class="button button-gray {selected === 1 ? "button-selected" : ""}" disabled={!$value}>x1</button>
-	<button on:click={() => multiply(3)} class="button button-gray {selected === 3 ? "button-selected" : ""}" disabled={!$value}>x3</button>
-	<button on:click={() => multiply(6)} class="button button-gray {selected === 6 ? "button-selected" : ""}" disabled={!$value}>x6</button>
+	<button on:click={() => multiply(1)} class="button button-gray {$selectedMultiplier === 1 ? "button-selected" : ""}" disabled={!$value}>x1</button>
+	<button on:click={() => multiply(3)} class="button button-gray {$selectedMultiplier === 3 ? "button-selected" : ""}" disabled={!$value}>x3</button>
+	<button on:click={() => multiply(6)} class="button button-gray {$selectedMultiplier === 6 ? "button-selected" : ""}" disabled={!$value}>x6</button>
 </div>
 <style>
 	#multipliers {
