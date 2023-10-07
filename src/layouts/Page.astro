@@ -9,6 +9,12 @@ const { title } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<title>{title}</title>
+
+		<meta content="Grid Calculator" property="og:title" />
+		<meta content="Figure out the grid dimensions for your Minecraft logos in Adobe Illustrator" property="og:description" />
+		<meta name="description" content="Figure out the grid dimensions for your Minecraft logos in Adobe Illustrator" />
+		<meta content="https://grid-calculator.theannoying.dev/favicon.svg" property="og:image" />
+		<meta content="#f8a13f" name="theme-color" />
 		<ViewTransitions />
 	</head>
 	<body>
@@ -156,5 +162,10 @@ const { title } = Astro.props;
 		.data {
 			width: auto;
 		}
+	}
+
+	@font-face {
+		font-family: "minecraft/five-bold";
+		src: url("/fonts/minecraft/five-bold.ttf");
 	}
 </style>

@@ -4,14 +4,6 @@
 
 	const fonts = [
 		{
-			id: "Minecraft",
-			fontList: [
-				[ "Five", 7, "Minecraft" ],
-				[ "Five Bold", 13, "Minecraft" ],
-				[ "Seven", 13, "Minecraft" ],
-			]
-		},
-		{
 			id: "FloideN",
 			fontList: [
 				[ "MC Eleven", 14, "FloideN" ],
