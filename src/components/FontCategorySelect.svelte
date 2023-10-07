@@ -47,8 +47,9 @@
 		}
 	];
 </script>
-<button on:click={() => dialog.showModal()}>Select Font</button>
+<button class="button" on:click={() => dialog.showModal()}>Select Font</button>
 <dialog id="modal" bind:this={dialog}>
+	<button class="dialog-close" on:click={() => dialog.close()}><img src="/x.svg" alt="X Icon" /></button>
 	<h1>Select category</h1>
 	<div>
 		{#each fonts as category}
