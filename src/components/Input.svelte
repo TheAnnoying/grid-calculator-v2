@@ -26,7 +26,7 @@
 
 	@media (max-width: 640px) {
 		input {
-			font-size: 1rem;
+			font-size: 1.3rem;
 		}
 	}
 

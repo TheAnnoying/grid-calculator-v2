@@ -19,4 +19,10 @@
 		gap: 50px;
 		margin: 30px;
 	}
+
+	@media (max-width: 640px) {
+		#container {
+			gap: 15px;
+		}
+	}
 </style>

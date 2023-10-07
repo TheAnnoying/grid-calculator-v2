@@ -19,7 +19,7 @@ import Result from "../components/Result.svelte";
 </Page>
 <style>
 	img {
-		padding: 50px;
+		margin: 50px;
 		max-width: calc(100% - 40px);
 	}
 
@@ -37,6 +37,10 @@ import Result from "../components/Result.svelte";
 	}
 
 	@media (max-width: 640px) {
+		img {
+			margin: 0;
+		}
+		
 		div {
 			flex-direction: column;
 		}
