@@ -7,9 +7,9 @@ A new github repo has been created for this rewrite.
 * The website also calculates the grid height
 
 ## 🚀 Usage
-This project is hosted on Cloudflare pages under [this url](https://grid-calculator-v2.theannoying.dev).
+This project is hosted on Cloudflare pages under [this url](https://grid-calculator.theannoying.dev).
 
-[![Open hosted version](/public/open_hosted_version.svg)](https://grid-calculator-v2.theannoying.dev/)
+[![Open hosted version](/public/open_hosted_version.svg)](https://grid-calculator.theannoying.dev/)
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg/)](https://stackblitz.com/github/TheAnnoying/grid-calculator-v2/)
 
 ## 🧑‍💻 How to run locally
