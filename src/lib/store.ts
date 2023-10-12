@@ -4,6 +4,6 @@ export let
 	currentWidth = writable(1),
 	currentHeight = writable(1),
 	selectedMultiplier = writable(1),
-	currentFont = writable({ id: null, size: "13px", name: null }),
+	currentFont = writable({ id: "patred/minecraft-ten-lowercase", size: "13px", name: "Patred - Minecraft Ten Lowercase" }),
 	canvas = writable(null),
 	value = writable(null);
