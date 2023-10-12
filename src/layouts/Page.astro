@@ -59,14 +59,18 @@ const { title } = Astro.props;
 	}
 
 	.button-selected,
-	button:focus-visible {
+	.button:focus-visible {
 		border-image-source: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIklEQVQImU3JMQEAIBAAId5kRjCZlc9VVqaCMAvte6D55wHuGwsbp2XuGAAAAABJRU5ErkJggg==");
 		outline: 0;
 	}
 
-	button:active {
+	.button:active {
 		filter: brightness(.7);
 		transform: translateY(3px);
+	}
+
+	.button:hover {
+		filter: brightness(1.1);
 	}
 
 	.button-gray {
