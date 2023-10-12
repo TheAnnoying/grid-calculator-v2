@@ -46,7 +46,7 @@
 	<h1>Select category</h1>
 	<div>
 		{#each fonts as category}
-			<FontDialog {category}/>
+			<FontDialog {category} oldDialog={dialog}/>
 		{/each}
 	</div>
 </dialog>

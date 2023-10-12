@@ -2,6 +2,7 @@
 	import { currentFont, currentHeight, currentWidth, selectedMultiplier } from "../lib/store";
 	import { updateDimensions } from "../lib/updateDimensions";
 	export let category;
+	export let oldDialog;
 
 	let dialog;
 	const clean = (input) => input.toLowerCase().replace(/ +/g, "-");
@@ -13,6 +14,7 @@
 		currentWidth.set($currentWidth*$selectedMultiplier);
 
 		dialog.close();
+		oldDialog.close();
 	}
 </script>
 <button class="button" on:click={() => dialog.showModal()}>{category.id}</button>
