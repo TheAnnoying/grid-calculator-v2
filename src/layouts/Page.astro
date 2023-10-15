@@ -77,12 +77,20 @@ const { title } = Astro.props;
 		filter: grayscale(1) drop-shadow(7px 7px #0004);
 	}
 
+	.button-gray:hover {
+		filter: grayscale(1) drop-shadow(7px 7px #0004) brightness(1.1);
+	}
+
 	.button-gray:active {
 		filter: grayscale(1) drop-shadow(7px 7px #0004) brightness(.7);
 	}
 
 	.button-red {
 		filter: hue-rotate(225deg) drop-shadow(7px 7px #0004);
+	}
+
+	.button-red:hover {
+		filter: hue-rotate(225deg) drop-shadow(7px 7px #0004) brightness(1.1);
 	}
 
 	.button-red:active {
