@@ -3,13 +3,19 @@ import Page from "../layouts/Page.astro";
 ---
 
 <Page title="404">
-	<img src="/404.svg" />
-	<p>You might've landed on the wrong page, pal.</p>
-	<button class="button">Return Home</button>
+	<div>
+		<img src="/404.svg" width="378" height="121" />
+		<p>You might've landed on the wrong page, pal.</p>
+	</div>
+	<a href="/" transition:name="link" class="button">HOME</a>
 </Page>
 <style>
+	div {
+		margin: 50px;
+		text-align: center;
+	}
+
 	img {
-		width: 600px;
-		padding: 20px;
+		max-width: calc(100% - 40px);
 	}
 </style>
