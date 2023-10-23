@@ -35,7 +35,8 @@
 				[ "Dungeons v2 AltLw", 13, "Patred" ],
 				[ "MC Ten Drip", 13, "Patred" ],
 				[ "MC Ten Round", 13, "Patred" ],
-				[ "MC Ten Round Drip", 15, "Patred" ]
+				[ "MC Ten Round Drip", 15, "Patred" ],
+				[ "Minecraft Ten Serif", 10, "Patred" ]
 			]
 		}
 	];
