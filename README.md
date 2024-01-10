@@ -4,7 +4,7 @@
 ## 📰 Changes
 A new github repo has been created for this rewrite.
 * The website no longer relies on a list of font widths
-* The website also calculates the grid height
+* The website now calculates the grid height
 
 ## 🚀 Usage
 This project is hosted on Cloudflare pages under [this url](https://grid-calculator.theannoying.dev).
@@ -13,7 +13,7 @@ This project is hosted on Cloudflare pages under [this url](https://grid-calcula
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg/)](https://stackblitz.com/github/TheAnnoying/grid-calculator-v2/)
 
 ## 🧑‍💻 How to run locally
-Run the follow commands:
+Run the following commands:
 
 * Clone the repo: `git clone https://github.com/TheAnnoying/grid-calculator-v2.git`
 * Enter the directory: `cd grid-calculator-v2`
