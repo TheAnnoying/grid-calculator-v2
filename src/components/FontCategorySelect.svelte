@@ -36,7 +36,8 @@
 				[ "MC Ten Drip", 13, "Patred" ],
 				[ "MC Ten Round", 13, "Patred" ],
 				[ "MC Ten Round Drip", 15, "Patred" ],
-				[ "Minecraft Ten Serif", 10, "Patred" ]
+				[ "Minecraft Ten Serif", 10, "Patred" ],
+				[ "MC Ten (Alt lowercase)", 10, "Patred" ]
 			]
 		}
 	];
