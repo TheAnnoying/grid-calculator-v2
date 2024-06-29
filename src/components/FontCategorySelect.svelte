@@ -39,6 +39,12 @@
 				[ "Minecraft Ten Serif", 10, "Patred" ],
 				[ "MC Ten (Alt lowercase)", 10, "Patred" ]
 			]
+		},
+		{
+			id: "pikelz",
+			fontList: [
+				[ "Vinearth Sans", 11, "pikelz" ]
+			]
 		}
 	];
 </script>
