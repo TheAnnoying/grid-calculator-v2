@@ -6,7 +6,7 @@
 		{
 			id: "FloideN",
 			fontList: [
-				[ "MC Eleven", 11, "FloideN" ],
+				[ "MC Eleven", 14, "FloideN" ],
 				[ "MC Nine", 9, "FloideN" ],
 				[ "MC Ten Alt", 9, "FloideN" ],
 				[ "MC Ten Fire", 16, "FloideN" ],
