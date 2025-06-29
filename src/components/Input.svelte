@@ -1,9 +1,13 @@
 <script>
 	import { value, canvas, currentFont } from "../lib/store";
 	import { updateDimensions } from "../lib/updateDimensions";
+	let hidden = true;
 </script>
-<input id="input" type="text" maxlength="55" spellcheck="false" placeholder="Enter text here" on:keyup={() => updateDimensions()} bind:value={$value} class="{$currentFont.id ? "" : "disabled"}" disabled={!$currentFont.id}/>
-<canvas id="canvas" bind:this={$canvas} height="400" width="1500"></canvas>
+<div style="display: flex; flex-direction: column;">
+	<input id="input" type="text" maxlength="55" spellcheck="false" placeholder="Enter text here" on:keyup={() => updateDimensions()} bind:value={$value} class="{$currentFont.id ? "" : "disabled"}" disabled={!$currentFont.id}/>
+	<button class="button {hidden ? "button-gray" : "button-green"}" on:click={() => hidden = !hidden}>WHAT THE SITE SEES</button>
+	<canvas id="canvas" style={hidden ? "display: none;" : ""} bind:this={$canvas} height="400" width="1500"></canvas>
+</div>
 <style>
 	input {
 		border-image-source: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImS3GsQEAMAjDMKcfNfx/m1nQpKjMVCBpv5wH5J4FxZUGMCo62UEAAAAASUVORK5CYII=");
@@ -31,7 +35,6 @@
 	}
 
 	#canvas {
-		display: none;
 		font-smooth: never;
 		-webkit-font-smoothing: none;
 	}

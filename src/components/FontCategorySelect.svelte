@@ -45,6 +45,12 @@
 			fontList: [
 				[ "Vinearth Sans", 11, "pikelz" ]
 			]
+		},
+		{
+			id: "DMart",
+			fontList: [
+				[ "Minecrafter Legends", 18, "DMart" ]
+			]
 		}
 	];
 </script>
