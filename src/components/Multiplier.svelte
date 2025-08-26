@@ -10,9 +10,9 @@
 	}
 </script>
 <div id="multipliers" class="{$value ? "" : "disabled"}">
-	<button on:click={() => multiply(1)} class="button button-gray {$selectedMultiplier === 1 ? "button-selected" : ""}" disabled={!$value}>x1</button>
-	<button on:click={() => multiply(3)} class="button button-gray {$selectedMultiplier === 3 ? "button-selected" : ""}" disabled={!$value}>x3</button>
-	<button on:click={() => multiply(6)} class="button button-gray {$selectedMultiplier === 6 ? "button-selected" : ""}" disabled={!$value}>x6</button>
+	<button onclick={() => multiply(1)} class="button button-gray {$selectedMultiplier === 1 ? "button-selected" : ""}" disabled={!$value}>x1</button>
+	<button onclick={() => multiply(3)} class="button button-gray {$selectedMultiplier === 3 ? "button-selected" : ""}" disabled={!$value}>x3</button>
+	<button onclick={() => multiply(6)} class="button button-gray {$selectedMultiplier === 6 ? "button-selected" : ""}" disabled={!$value}>x6</button>
 </div>
 <style>
 	#multipliers {

@@ -1,6 +1,6 @@
 <script>
 	import FontDialog from "./FontDialog.svelte";
-	let dialog;
+	let dialog = $state();
 
 	const fonts = [
 		{
@@ -54,9 +54,9 @@
 		}
 	];
 </script>
-<button class="button" on:click={() => dialog.showModal()}>Select Font</button>
+<button class="button" onclick={() => dialog.showModal()}>Select Font</button>
 <dialog id="modal" bind:this={dialog}>
-	<button class="dialog-close" on:click={() => dialog.close()}><img src="/x.svg" alt="X Icon" /></button>
+	<button class="dialog-close" onclick={() => dialog.close()}><img src="/x.svg" alt="X Icon" /></button>
 	<h1>Select category</h1>
 	<div>
 		{#each fonts as category}
@@ -65,6 +65,10 @@
 	</div>
 </dialog>
 <style>
+	button.button {
+		width: 100%;
+	}
+
 	div {
 		display: grid;
 	}

@@ -1,11 +1,13 @@
 <script>
 	import { value, canvas, currentFont } from "../lib/store";
 	import { updateDimensions } from "../lib/updateDimensions";
-	let hidden = true;
+	let hidden = $state(true);
 </script>
-<div style="display: flex; flex-direction: column;">
-	<input id="input" type="text" maxlength="55" spellcheck="false" placeholder="Enter text here" on:keyup={() => updateDimensions()} bind:value={$value} class="{$currentFont.id ? "" : "disabled"}" disabled={!$currentFont.id}/>
-	<button class="button {hidden ? "button-gray" : "button-green"}" on:click={() => hidden = !hidden}>WHAT THE SITE SEES</button>
+<div style="display: flex; flex-direction: column; width: 100%;">
+	<div style="display: flex; flex-direction: row;">
+		<input id="input" type="text" maxlength="55" spellcheck="false" placeholder="Enter text here" onkeyup={() => updateDimensions()} bind:value={$value} class="{$currentFont.id ? "" : "disabled"}" disabled={!$currentFont.id}/>
+		<button class="button {hidden ? "button-gray" : "button-green"}" onclick={() => hidden = !hidden}>SEE</button>
+	</div>
 	<canvas id="canvas" style={hidden ? "display: none;" : ""} bind:this={$canvas} height="400" width="1500"></canvas>
 </div>
 <style>
@@ -19,7 +21,7 @@
 		padding: 5px 25px;
 		border-radius: 0;
 		background-color: transparent;
-		margin: 5px;
+		margin: 5px 0;
 		filter: drop-shadow(0 5px black);
 	}
 
@@ -35,6 +37,7 @@
 	}
 
 	#canvas {
+		background-color: black;
 		font-smooth: never;
 		-webkit-font-smoothing: none;
 	}
