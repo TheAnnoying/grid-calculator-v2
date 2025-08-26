@@ -15,7 +15,6 @@ import Result from "../components/Result.svelte";
 	</div>
 	<Multiplier client:visible />
 	<Result client:visible />
-	<a href="/about" transition:name="link">About</a>
 </Page>
 <style>
 	img {
@@ -25,7 +24,7 @@ import Result from "../components/Result.svelte";
 
 	div {
 		display: flex;
-		flex-direction: row;
+		flex-direction: column;
 		align-items: center;
 		gap: 10px;
 		margin-bottom: 5px;
