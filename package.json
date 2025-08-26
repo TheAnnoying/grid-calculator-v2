@@ -10,10 +10,10 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/partytown": "^2.0.1",
+    "@astrojs/partytown": "^2.1.4",
     "@astrojs/prefetch": "^0.4.1",
-    "@astrojs/svelte": "^4.0.3",
-    "astro": "^3.3.2",
-    "svelte": "^4.2.2"
+    "@astrojs/svelte": "^7.1.0",
+    "astro": "^5.13.3",
+    "svelte": "^5.38.3"
   }
 }
