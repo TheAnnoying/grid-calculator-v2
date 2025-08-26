@@ -3,7 +3,7 @@
 </script>
 <div id="container">
 	<div class="data">
-		<p>Dimensions</p>
+		<p>Grid Dimensions</p>
 		<span>{$currentWidth - 1} x {$currentHeight - 1}</span>
 	</div>
 	<div class="data">
